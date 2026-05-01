@@ -68,3 +68,7 @@ public:
         // Step 5: Insert di tengah / akhir
         newNode->next = current->next;
         newNode->prev = current;
+
+        if (current->next != NULL)
+            current->next->prev = newNode;
+
