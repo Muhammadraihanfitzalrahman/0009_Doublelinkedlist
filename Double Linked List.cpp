@@ -60,3 +60,11 @@ public:
         }
 
         if (current->next != NULL && nim == current->next->noMhs)
+        {
+            cout << "\nDuplicate roll numbers not allowed" << endl;
+            return;
+        }
+
+        // Step 5: Insert di tengah / akhir
+        newNode->next = current->next;
+        newNode->prev = current;
